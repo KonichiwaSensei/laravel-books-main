@@ -18,11 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::resource('authors', AuthorController::class);
+Route::redirect('/home', '/');
 
 Route::get('/books/latest', function () {
     return view('books.latest');
 });
+
+Route::resource('authors', AuthorController::class);
 Route::resource('books', BookController::class);
 

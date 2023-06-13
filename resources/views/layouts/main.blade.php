@@ -8,6 +8,16 @@
         @vite('resources/css/app.scss')
     </head>
     <body>
+        <nav>
+            @auth
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+
+                    <button>Logout</button>
+                </form>
+            @endauth
+
+        </nav>
         @include('common/messages')
 
         @yield('content')
