@@ -3,6 +3,11 @@
 @section('content')
     <h3>{{ $book->title }}</h3>
 
+    @foreach($book->authors as $author)
+        <h3>{{ $author->name }}</h3>
+    @endforeach
+
+
     <div>published at: {{ $book->publication_date }}</div>
     <div>price: {{ $book->price }} Eur</div>
     {!! $book->description !!}

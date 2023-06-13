@@ -21,4 +21,8 @@ Route::get('/', function () {
 
 Route::resource('authors', AuthorController::class);
 
+Route::get('/books/latest', function () {
+    return view('books.latest');
+});
 Route::resource('books', BookController::class);
+

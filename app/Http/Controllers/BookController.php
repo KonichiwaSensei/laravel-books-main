@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::all();
+        $books = Book::with('authors')->limit(10)->get();
 
         return view('books.index', compact('books'));
     }
