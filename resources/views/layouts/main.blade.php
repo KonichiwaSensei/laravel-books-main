@@ -8,6 +8,8 @@
         @vite('resources/css/app.scss')
     </head>
     <body>
+        @include('common/messages')
+
         @yield('content')
     </body>
 </html>
