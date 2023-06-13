@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::redirect('/home', '/');
+
+Route::get('/home', function () {
+    return view('home');
+})->middleware('auth');
 
 Route::get('/books/latest', function () {
     return view('books.latest');

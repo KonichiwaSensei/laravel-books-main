@@ -9,7 +9,7 @@ const loadData = async () => {
 
   listElement.innerHTML = '';
 
-  data.forEach((book) => {
+  data.data.forEach((book) => {
     const item = document.createElement('li');
     item.innerText = book.title;
     listElement.appendChild(item);
