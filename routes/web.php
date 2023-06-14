@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BookController as AdminBookController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,5 @@ Route::get('/books/latest', function () {
 
 Route::resource('authors', AuthorController::class);
 Route::resource('books', BookController::class);
+
 

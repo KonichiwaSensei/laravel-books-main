@@ -17,6 +17,9 @@
                 </form>
             @endauth
 
+            @can('admin')
+                <a href="/admin/books">Books administration</a>
+            @endcan
         </nav>
         @include('common/messages')
 
